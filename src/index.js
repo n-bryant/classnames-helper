@@ -8,10 +8,10 @@ import getCSSAPIClassnames from "./getCSSAPIClassnames";
 import uniqueClassnames from "./uniqueClassnames";
 
 /**
- * A generator that will provide class names for a component's root or sub elements. Accepts objects for specifying
+ * A helper that will provide class names for a component's root or sub elements. Accepts objects for specifying
  * conditional modifiers. Generated class names will contain BEM identifiers.
  */
-class ClassNameGenerator {
+class ClassNameHelper {
   /**
    *
    * @param {Function|String} componentOrName A component with a 'name' or 'displayName' property or the component name
@@ -97,14 +97,14 @@ class ClassNameGenerator {
   };
 }
 
-export default function createClassNameGenerator(componentOrName, props) {
+export default function createClassNameHelper(componentOrName, props) {
   if (arguments.length === 1) {
-    const curried = props => createClassNameGenerator(componentOrName, props);
-    return Object.assign(curried, new ClassNameGenerator(componentOrName));
+    const curried = props => createClassNameHelper(componentOrName, props);
+    return Object.assign(curried, new ClassNameHelper(componentOrName));
   }
   invariant(
     props && typeof props === "object",
     "The classname generator expects to receive an object of props to select class names for a component's CSS API"
   );
-  return new ClassNameGenerator(componentOrName, props);
+  return new ClassNameHelper(componentOrName, props);
 }
