@@ -8,10 +8,10 @@ The goal of this "classnames helper" is to provide a tool that removes the need 
 
 ```bash
   # via npm
-  npm install classnames-helper
+  npm install @nbryant/classnames-helper
 
   # via yarn
-  yarn add classnames-helper
+  yarn add @nbryant/classnames-helper
 ```
 
 ## Usage
