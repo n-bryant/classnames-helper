@@ -1,6 +1,6 @@
 {
   "name": "@n_bryant/classnames-helper",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A companion tool for React components that eases the burden of implementing a component's CSS API in tandem with BEM identifiers.",
   "repository": "https://github.com/n-bryant/classnames-helper.git",
   "license": "UNLICENSED",
