@@ -21,7 +21,7 @@ The goal of this "classnames helper" is to provide a tool that removes the need 
 The helper expects to receive a component's name, and the helper should be attached to the component statically.
 
 ```javascript
-MyComponent.classnames = createClassNameGenerator("MyComponent");
+MyComponent.classnames = createClassNameHelper("MyComponent");
 ```
 
 Next, the helper must be applied with props to build the prop specific class name helper.
@@ -89,7 +89,7 @@ export function ExampleComponent(props) {
     </Drawer>
   );
 }
-ExampleComponent.classnames = createClassNameGenerator("ExampleComponent");
+ExampleComponent.classnames = createClassNameHelper("ExampleComponent");
 ExampleComponent.propTypes = {
   classes: PropTypes.shape({
     /** Applied to the root element */
